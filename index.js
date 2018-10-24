@@ -5,17 +5,16 @@ const axios = require('axios')
 
 app.use(bodyParser.json()) 
 app.use(
-    bodyParser.urlencoded9{
+    bodyParser.urlencoded({
         extended: true
     })
-    )
+)
 
 app.post('/new-message', function(req, res) {
     const {message} = req.body
     
 if (!message || message.text.toLowerCae().indexOf('Date hoje?') <0){
-return res.end()
-}
+    return res.end()
 }
 
 axios
@@ -26,7 +25,7 @@ axios
          text: 'Starbucks Haddock, 19h30'
      })
 
-  .then(responde => {
+  .then(response => {
       console.log('Message posted')
       res.end('ok')
   })
