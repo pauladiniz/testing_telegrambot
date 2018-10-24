@@ -24,8 +24,7 @@ axios
      {
          chat_id: message.chat.id,
          text: 'Starbucks Haddock, 19h30'
-     }
- )
+     })
 
   .then(responde => {
       console.log('Message posted')
